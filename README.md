@@ -1,8 +1,7 @@
-\# G90 BootLogoInject
+\# G90 Boot-Logo-Replacer
 
 
-
-A simple Ports + ports\_scripts based tool for the G90 handheld that allows direct replacement of the internal boot splash BMP files located in `/flash`.
+A simple Ports + ports_scripts based tool for the G90 handheld that allows direct replacement of the internal boot splash BMP files located in `/flash`.
 
 
 
@@ -12,7 +11,7 @@ Designed for:
 
 \* EmuELEC hybrid G90 systems
 
-\* Internal firmware installations
+\* Internal firmware asset installations
 
 \* Pixel-OS / RoyMods-Advance customization workflows
 
@@ -32,17 +31,19 @@ Designed for:
 
 &#x20; \* `logo.bmp`
 
-&#x20; \* `logo\_kernel.bmp`
+&#x20; \* `logo_kernel.bmp`
 
-&#x20; \* `logo\_hdmi.bmp`
+&#x20; \* `logo_hdmi.bmp`
 
-&#x20; \* `logo\_kernel\_hdmi.bmp`
+&#x20; \* `logo_kernel_hdmi.bmp`
+
+&#x20; \* `loading-game.png`
 
 \* Uses Ports launcher system
 
 \* No firmware reflashing required
 
-\* Works directly from SD card ports/ports_scripts and backup folder setup
+\* Works directly from SD card's ports, ports_scripts and backup folder setup
 
 
 \--
@@ -76,7 +77,7 @@ Copy:
 
 ports
 
-ports\_scripts
+ports_scripts
 
 backup
 
@@ -109,25 +110,19 @@ Required filenames (as provided):
 
 logo.bmp
 
-logo\_kernel.bmp
+logo_kernel.bmp
 
-logo\_hdmi.bmp
+logo_hdmi.bmp
 
-logo\_kernel\_hdmi.bmp
+logo_kernel_hdmi.bmp
 
-```
-
-
-
-Place edited BMPs (use PAINT3D or other BMP editor to make your own) into:
-
-
-
-```text
-
-/backup/
+loading-game.png
 
 ```
+
+
+
+You can change the provided BMPs and PNG with image editors like Paint3D on Windows.
 
 
 
@@ -147,6 +142,10 @@ Launch:
 
 BootLogoInject
 
+and
+
+LoadingGameInject
+
 ```
 
 
@@ -163,13 +162,13 @@ Ports
 
 
 
-The tool will:
+The tools will:
 
 
 
 1\. Remount `/flash` writable
 
-2\. Replace internal boot logos
+2\. Replace internal boot/load logos
 
 3\. Sync filesystem
 
